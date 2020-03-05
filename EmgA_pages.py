@@ -15,7 +15,7 @@ from dash.dependencies import Input, Output, State
 # import os  # Importing OS functions
 
 
-from app import app
+from app import app, server
 from apps import page_1, page_2
 
 
