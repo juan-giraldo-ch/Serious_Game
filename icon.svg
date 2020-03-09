@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -115,7 +115,7 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="2.4513956"
-     inkscape:cx="85.106817"
+     inkscape:cx="12.087187"
      inkscape:cy="33.47029"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -415,18 +415,22 @@
        x="122.68742"
        y="51.287956"
        id="tspan1205-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:18.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1">Electricity </tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:18.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1"><tspan
+   style="-inkscape-font-specification:'Agency FB, Bold Condensed';font-family:'Agency FB';font-weight:bold;font-style:normal;font-stretch:condensed;font-variant:normal;font-size:18.66666667px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+   id="tspan873">Electricity</tspan> </tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#8aee59;fill-opacity:1;stroke:none"
-     x="105.14639"
+     x="98.619499"
      y="75.355881"
      id="text1203-2"><tspan
        sodipodi:role="line"
-       x="105.14639"
+       x="98.619499"
        y="75.355881"
        id="tspan1205-8"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:18.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1">             Markets</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:18.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1">             <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan875">Markets</tspan></tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#8aee59;fill-opacity:1;stroke:none"
@@ -438,6 +442,6 @@
        y="98.630508"
        id="tspan1205-8-7"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:18.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1">                            <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:26.66666603px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:26.66666667px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start"
    id="tspan1267">Game</tspan></tspan></text>
 </svg>
