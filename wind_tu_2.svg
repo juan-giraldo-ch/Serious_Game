@@ -12,9 +12,9 @@
    version="1.0"
    x="0px"
    y="0px"
-   width="328.10153"
-   height="147.97426"
-   viewBox="0 0 328.10153 147.97426"
+   width="328.10156"
+   height="147.98988"
+   viewBox="0 0 328.10156 147.98989"
    xml:space="preserve"
    id="svg56"
    sodipodi:docname="wind_tu_2.svg"
@@ -57,9 +57,9 @@
    inkscape:window-height="1017"
    id="namedview58"
    showgrid="false"
-   inkscape:zoom="2.1454546"
-   inkscape:cx="91.626955"
-   inkscape:cy="101.599"
+   inkscape:zoom="1.5170655"
+   inkscape:cx="5.9329273"
+   inkscape:cy="74.437028"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -70,7 +70,7 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"><sodipodi:guide
-     position="164.85631,89.081335"
+     position="164.97331,89.096962"
      orientation="1,0"
      id="guide901"
      inkscape:locked="false" /></sodipodi:namedview>
@@ -79,25 +79,25 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke:none"
    id="text846-9"
    y="147.69301"
-   x="-1.9685625"><tspan
+   x="-1.8515625"><tspan
      sodipodi:role="line"
      id="tspan844-6"
-     x="-1.9685625"
+     x="-1.8515625"
      y="147.69301">Download Historical Wind Data</tspan></text>
 <g
    id="Artboard"
-   transform="translate(98.608698)">
+   transform="translate(98.725698)">
 </g>
 <circle
    id="circle3"
    r="55"
-   cy="-70.186745"
-   cx="-157.97893"
+   cy="-70.197762"
+   cx="-158.09541"
    style="fill:#8aee59;fill-opacity:1"
    transform="rotate(174.59716)" /><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g7"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<path
    style="fill:#e2e4e5;stroke:#a8a8a8;stroke-opacity:1"
    d="M 57.645,49.979 C 56.939,50.607 56.019,51 55,51 53.981,51 53.061,50.607 52.355,49.979 L 47,83 h 16 z"
@@ -106,7 +106,7 @@
 		</g><g
    style="fill:#ffffff;fill-opacity:1;stroke:#a8a8a8;stroke-width:1.00035012;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="g11"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<path
    style="fill:#ffffff;fill-opacity:1;stroke:#a8a8a8;stroke-width:1.00035012;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    d="m 55,51 c -1.019,0 -1.939,-0.393 -2.645,-1.021 L 47,83 h 8 z"
@@ -114,7 +114,7 @@
    inkscape:connector-curvature="0" />
 		</g><g
    id="g4823"
-   transform="translate(131.72468,0.46610154)"><g
+   transform="translate(131.84168,0.46610184)"><g
      transform="matrix(1.2845503,0,0,1.2845503,-15.067098,-15.343058)"
      id="g31"
      style="stroke:#a8a8a8;stroke-opacity:1">
@@ -135,7 +135,7 @@
 		</g></g><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g15"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<path
    style="fill:#ffffff;stroke:#a8a8a8;stroke-opacity:1"
    d="m 58.998,47 c 2.086,-8.035 -0.053,-20.028 -3.582,-23.274 -0.36,-0.331 -0.821,-0.525 -1.288,-0.381 -0.467,0.144 -0.802,0.554 -0.849,1.041 L 51.077,47 Z"
@@ -144,7 +144,7 @@
 		</g><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g19"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<path
    style="fill:#ffffff;stroke:#a8a8a8;stroke-opacity:1"
    d="m 53.071,50.502 c 6.031,5.704 17.568,9.617 22.114,8.091 0.463,-0.155 0.856,-0.466 0.955,-0.944 0.099,-0.478 -0.099,-0.97 -0.502,-1.246 L 56.893,43.563 Z"
@@ -152,7 +152,7 @@
    inkscape:connector-curvature="0" />
 		</g><g
    id="g4817-4"
-   transform="translate(51.391867,17.24535)"><g
+   transform="translate(51.508867,17.24535)"><g
      transform="matrix(1.2845503,0,0,1.2845503,-15.067098,-15.343058)"
      id="g35-9"
      style="stroke:#a8a8a8;stroke-opacity:1"><path
@@ -169,7 +169,7 @@
        style="fill:#ffffff;stroke:#a8a8a8;stroke-opacity:1" /></g></g><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g23"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<path
    style="fill:#ffffff;stroke:#a8a8a8;stroke-opacity:1"
    d="m 52.863,43.621 c -7.906,2.531 -16.899,10.748 -17.757,15.466 -0.087,0.481 -0.005,0.975 0.366,1.292 0.371,0.318 0.897,0.381 1.333,0.161 L 57.096,50.316 Z"
@@ -177,7 +177,7 @@
    inkscape:connector-curvature="0" />
 		</g><g
    id="g4817"
-   transform="translate(117.74163)"><g
+   transform="translate(117.85863)"><g
      transform="matrix(1.2845503,0,0,1.2845503,-15.067098,-15.343058)"
      id="g35"
      style="stroke:#a8a8a8;stroke-opacity:1">
@@ -198,7 +198,7 @@
 		</g></g><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g47"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<circle
    style="fill:#5b5c5f;stroke:#a8a8a8;stroke-opacity:1"
    cx="55"
@@ -208,7 +208,7 @@
 		</g><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g51"
-   transform="matrix(1.2845503,0,0,1.2845503,93.818599,-15.343058)">
+   transform="matrix(1.2845503,0,0,1.2845503,93.935599,-15.343058)">
 			<path
    style="fill:#9e9fa0;stroke:#a8a8a8;stroke-opacity:1"
    d="m 55,43 c -2.209,0 -4,1.791 -4,4 0,1.111 0.454,2.115 1.185,2.839 l 5.654,-5.654 C 57.115,43.454 56.111,43 55,43 Z"
@@ -217,17 +217,17 @@
 		</g>
 <g
    aria-label="Download Historical Wind Data"
-   transform="matrix(0.95159827,0,0,1,103.93774,2.7966099)"
+   transform="matrix(0.95159827,0,0,1,104.05474,2.7966102)"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.07175815px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke:none"
    id="text4854"><rect
-     style="opacity:1;fill:#454545;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.11796379;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     style="opacity:1;fill:#454545;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.1405983;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
      id="rect1225"
      width="344.61575"
-     height="18.258474"
+     height="18.360434"
      x="-109.22439"
      y="126.82265" /><text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961526px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke:none;stroke-width:1.02511644;"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961594px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke:none;stroke-width:1.02511644"
      id="text846"
      y="148.53568"
      x="-108.44635"
@@ -236,5 +236,5 @@
        id="tspan844"
        x="-108.44635"
        y="148.53568"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961526px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke-width:1.02511644;letter-spacing:-1.59918157px">Download Historical Wind Data</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961594px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-1.59918153px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke-width:1.02511644">Download Historical Wind Data</tspan></text>
 </g></svg>
