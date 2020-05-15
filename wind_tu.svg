@@ -13,9 +13,9 @@
    version="1.0"
    x="0px"
    y="0px"
-   width="128.78665"
-   height="120.02118"
-   viewBox="0 0 128.78665 120.02118"
+   width="131.3502"
+   height="120.01652"
+   viewBox="0 0 131.3502 120.01652"
    xml:space="preserve"
    id="svg56"
    sodipodi:docname="wind_tu.svg"
@@ -46,8 +46,8 @@
    id="namedview58"
    showgrid="false"
    inkscape:zoom="4.2909091"
-   inkscape:cx="25.352701"
-   inkscape:cy="57.796968"
+   inkscape:cx="25.841388"
+   inkscape:cy="57.796972"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -60,18 +60,18 @@
    fit-margin-bottom="0" />
 <g
    id="Artboard"
-   transform="translate(9.7881372,10.021188)">
+   transform="translate(10.276824,10.016523)">
 </g>
 <circle
    id="circle3"
    r="55"
-   cy="-69.866936"
-   cx="-59.530396"
+   cy="-69.900322"
+   cx="-60.017963"
    style="fill:#ff9600;fill-opacity:1"
    transform="rotate(175.53565)" /><g
    id="g53"
    style="stroke:#a8a8a8;stroke-opacity:1"
-   transform="matrix(1.2845503,0,0,1.2845503,-5.2789608,-5.3218696)">
+   transform="matrix(1.2845503,0,0,1.2845503,-4.7902737,-5.3265349)">
 		<g
    id="g7"
    style="stroke:#a8a8a8;stroke-opacity:1">
@@ -186,11 +186,11 @@
    aria-label="Download Historical Wind Data"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    id="text4854"
-   transform="translate(-284.66133,-102.31506)" /><text
+   transform="translate(-284.17264,-102.31973)" /><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.1px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke:none"
    id="text6299"
-   transform="translate(1.5871405e-6,2.0101693e-6)"><textPath
+   transform="matrix(1.0199054,0,0,1,-0.91380575,-0.93686666)"><textPath
      xlink:href="#circle3"
      id="textPath6305"><tspan
    id="tspan6297"
