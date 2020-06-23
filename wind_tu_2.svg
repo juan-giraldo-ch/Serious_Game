@@ -84,7 +84,7 @@
    r="55"
    cy="-70.197762"
    cx="-158.09541"
-   style="fill:#8aee59;fill-opacity:1"
+   style="fill:#ff9600;fill-opacity:1"
    transform="rotate(174.59716)" /><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g7"
@@ -209,10 +209,10 @@
 <g
    aria-label="Download Historical Wind Data"
    transform="matrix(0.95159827,0,0,1,104.05474,2.7966102)"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.07175815px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.07175815px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke:none"
    id="text4854"><text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961594px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke:none;stroke-width:1.02511644"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961594px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke:none;stroke-width:1.02511644"
    id="text846"
    y="148.53568"
    x="-108.44635"
@@ -221,6 +221,6 @@
      id="tspan844"
      x="-108.44635"
      y="148.53568"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961594px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-1.59918153px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke-width:1.02511644">Download Historical Wind Data</tspan></text>
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.96961594px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-1.59918153px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke-width:1.02511644">Download Historical Wind Data</tspan></text>
 
 </g></svg>
