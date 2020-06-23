@@ -21,7 +21,7 @@
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
    id="metadata62"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs60"><inkscape:path-effect
    effect="spiro"
    id="path-effect981"
@@ -40,31 +40,23 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="958"
-   inkscape:window-height="1008"
+   inkscape:window-width="1920"
+   inkscape:window-height="1137"
    id="namedview58"
    showgrid="false"
-   inkscape:zoom="0.90509668"
-   inkscape:cx="199.11158"
-   inkscape:cy="80.12965"
-   inkscape:window-x="-7"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
+   inkscape:zoom="2.56"
+   inkscape:cx="159.61021"
+   inkscape:cy="66.689541"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
    inkscape:current-layer="svg56"
    showguides="true"
    inkscape:guide-bbox="true"
    fit-margin-top="0"
    fit-margin-left="0"
    fit-margin-right="0"
-   fit-margin-bottom="0"><sodipodi:guide
-     position="197.6376,92.75251"
-     orientation="0,1"
-     id="guide907"
-     inkscape:locked="false" /><sodipodi:guide
-     position="164.6225,56.766997"
-     orientation="1,0"
-     id="guide909"
-     inkscape:locked="false" /></sodipodi:namedview>
+   fit-margin-bottom="0" />
 <g
    id="Artboard"
    transform="translate(109.03933,8.3388102e-6)">
@@ -74,7 +66,7 @@
    r="55"
    cy="-67.601753"
    cx="-159.2605"
-   style="fill:#ff9600;fill-opacity:1"
+   style="fill:#222831;fill-opacity:0.94117647"
    transform="rotate(175.53565)" /><g
    id="g53"
    style="stroke:#a8a8a8;stroke-opacity:1"
@@ -197,7 +189,7 @@
 
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#222831;fill-opacity:0.94117647;stroke:none;"
    id="text846"
    y="147.76038"
    x="-1.8515625"><tspan
@@ -205,4 +197,5 @@
      id="tspan844"
      x="-1.8515625"
      y="147.76038">Download Historical Wind Data</tspan></text>
+
 </svg>
