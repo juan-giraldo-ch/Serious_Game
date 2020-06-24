@@ -31,7 +31,22 @@
    is_visible="true" />
 	
 	
-</defs><sodipodi:namedview
+<clipPath
+   id="clipPath835"
+   clipPathUnits="userSpaceOnUse"><path
+     inkscape:connector-curvature="0"
+     id="path833"
+     d="M 0,61.228 H 224.503 V 0 H 0 Z" /></clipPath><clipPath
+   id="clipPath843"
+   clipPathUnits="userSpaceOnUse"><path
+     inkscape:connector-curvature="0"
+     id="path841"
+     d="M 0,61.2285 H 224.503 V 0 H 0 Z" /></clipPath><clipPath
+   id="clipPath867"
+   clipPathUnits="userSpaceOnUse"><path
+     inkscape:connector-curvature="0"
+     id="path865"
+     d="M 0,61.228 H 224.503 V 0 H 0 Z" /></clipPath></defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -45,7 +60,7 @@
    id="namedview58"
    showgrid="false"
    inkscape:zoom="2.56"
-   inkscape:cx="159.61021"
+   inkscape:cx="94.571147"
    inkscape:cy="66.689541"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
@@ -66,7 +81,7 @@
    r="55"
    cy="-67.601753"
    cx="-159.2605"
-   style="fill:#222831;fill-opacity:0.94117647"
+   style="fill:#27496d;fill-opacity:0.94117647"
    transform="rotate(175.53565)" /><g
    id="g53"
    style="stroke:#a8a8a8;stroke-opacity:1"
@@ -189,7 +204,7 @@
 
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#222831;fill-opacity:0.94117647;stroke:none;"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#27496d;fill-opacity:0.94117647;stroke:none;"
    id="text846"
    y="147.76038"
    x="-1.8515625"><tspan
@@ -197,5 +212,6 @@
      id="tspan844"
      x="-1.8515625"
      y="147.76038">Download Historical Wind Data</tspan></text>
+
 
 </svg>
