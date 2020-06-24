@@ -44,7 +44,13 @@
 		
 		
 		
-	</defs><sodipodi:namedview
+	<inkscape:path-effect
+   is_visible="true"
+   id="path-effect981-8"
+   effect="spiro" /><inkscape:path-effect
+   is_visible="true"
+   id="path-effect977-6"
+   effect="spiro" /></defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -57,9 +63,9 @@
    inkscape:window-height="1137"
    id="namedview58"
    showgrid="false"
-   inkscape:zoom="4.2909091"
-   inkscape:cx="159.76667"
-   inkscape:cy="55.480624"
+   inkscape:zoom="2.1454546"
+   inkscape:cx="60.89046"
+   inkscape:cy="51.783383"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -69,14 +75,10 @@
    fit-margin-top="0"
    fit-margin-left="0"
    fit-margin-right="0"
-   fit-margin-bottom="0"><sodipodi:guide
-     position="164.97331,89.096962"
-     orientation="1,0"
-     id="guide901"
-     inkscape:locked="false" /></sodipodi:namedview>
+   fit-margin-bottom="0" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9600;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#32e0c4;fill-opacity:1;stroke:none;"
    id="text846-9"
    y="147.69301"
    x="-1.8515625"><tspan
@@ -84,6 +86,7 @@
      id="tspan844-6"
      x="-1.8515625"
      y="147.69301">Download Historical Wind Data</tspan></text>
+
 
 <g
    id="Artboard"
@@ -94,7 +97,7 @@
    r="55"
    cy="-70.197762"
    cx="-158.09541"
-   style="fill:#ff9600;fill-opacity:1"
+   style="fill:#32e0c4;fill-opacity:1"
    transform="rotate(174.59716)" /><g
    style="stroke:#a8a8a8;stroke-opacity:1"
    id="g7"
@@ -221,4 +224,12 @@
    transform="matrix(0.95159827,0,0,1,104.05474,2.7966102)"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-0.07175815px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#8aee59;fill-opacity:1;stroke:none"
    id="text4854">
-</g></svg>
+</g><g
+   id="Artboard-4"
+   transform="translate(0.02902,-132.3503)">
+</g><g
+   aria-label="Download Historical Wind Data"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   id="text4854-3"
+   transform="translate(-294.42044,-244.68656)" />
+</svg>
