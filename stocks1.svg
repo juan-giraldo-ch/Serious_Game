@@ -52,7 +52,7 @@
    fit-margin-right="0"
    fit-margin-bottom="0"
    inkscape:zoom="2.0716576"
-   inkscape:cx="161.54542"
+   inkscape:cx="81.174996"
    inkscape:cy="110.47794"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
@@ -65,7 +65,7 @@
    r="55"
    cy="55.064507"
    cx="164.21404"
-   style="fill:#222831;fill-opacity:0.94117647" /><g
+   style="fill:#27496d;fill-opacity:1" /><g
    id="g4174"
    transform="matrix(0.47887288,0,0,0.47887288,128.03368,18.169879)"
    style="fill:#fdfdff;fill-opacity:1;stroke:#a8a8a8;stroke-opacity:1">
@@ -144,7 +144,7 @@
    id="text4854"
    transform="translate(-174.71264,-275.62585)" /><text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#222731;fill-opacity:0.94117647;stroke:none;"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#27496d;fill-opacity:1;stroke:none;"
    id="text846"
    y="142.99274"
    x="13.829745"><tspan
@@ -152,6 +152,7 @@
      id="tspan844"
      x="13.829745"
      y="142.99274">Download Day Ahead Prices</tspan></text>
+
 
 
 
