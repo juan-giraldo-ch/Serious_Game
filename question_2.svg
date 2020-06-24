@@ -14,7 +14,7 @@
    viewBox="0 0 53.109975 69.397209"
    version="1.1"
    id="svg8"
-   sodipodi:docname="question.svg"
+   sodipodi:docname="question_2.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs2" />
@@ -70,7 +70,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.8741684px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:1.40810966">?</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.8741684px;line-height:1.25;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#eeeeee;fill-opacity:1;stroke:none;stroke-width:1.40810978"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.8741684px;line-height:1.25;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00909e;fill-opacity:1;stroke:none;stroke-width:1.40810978;"
        x="58.156185"
        y="169.00264"
        id="text828-9"><tspan
@@ -78,6 +78,6 @@
          id="tspan826-1"
          x="58.156185"
          y="169.00264"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.8741684px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#eeeeee;fill-opacity:1;stroke-width:1.40810978">?</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.8741684px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00909e;fill-opacity:1;stroke-width:1.40810978;">?</tspan></text>
   </g>
 </svg>
