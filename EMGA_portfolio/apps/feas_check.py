@@ -160,7 +160,7 @@ def feasibility_check(username, portf, bids):
     model.SOC_end = Constraint(model.S, model.T, rule=SOC_end_rule)
 
     # Define the Solver
-    solver = SolverFactory('ipopt')  # couenne
+    solver = SolverFactory('glpk')  # couenne
     solver.options['print_level'] = 0
 
 
@@ -303,7 +303,7 @@ def redispatch(portf, imbalance, ubpr_pos, ubpr_neg, d, bids):
     model.maxP_constr = Constraint(model.S, rule=maxP_rule)
 
     # Define the Solver
-    solver = SolverFactory('ipopt')  # couenne
+    solver = SolverFactory('glpk')  # couenne
     solver.options['print_level'] = 0
 
     # Solve
