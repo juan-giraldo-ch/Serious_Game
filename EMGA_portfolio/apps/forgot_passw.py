@@ -14,7 +14,7 @@ def send_email(players,receiver_email):
     smtp_server = "smtp.gmail.com"
     sender_email = "emgatue@gmail.com"  # Enter your address
     # receiver_email = "address@gmail.com"  # Enter receiver address
-    password = "emga123456"
+    password = "emga_12345"
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "Restore user Password - EMGA"

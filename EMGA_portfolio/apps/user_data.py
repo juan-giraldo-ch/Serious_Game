@@ -23,7 +23,7 @@ def drag_file():
                 'backgroundColor': app.color_1, 'font-size': '1.2vw'
             },
         ),
-    ], style={'textAlign': 'center'},)
+    ], style={'textAlign': 'center', },)
 
     return file
         ##########################################

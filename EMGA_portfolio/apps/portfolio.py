@@ -3,7 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import os  # Importing OS functions
 import dash_bootstrap_components as dbc
-from apps import tue_header
+from apps import tue_header, messages
 from app import app
 from dash.dependencies import Input, Output, State
 import psycopg2
@@ -37,8 +37,8 @@ DATABASE_URL = (url_data)
 
 # user_pwd, user_names = users_info()
 
-port_param = pd.read_csv(
-    r'C:\Users\20194851\Google Drive\Postdoc TUe\Project Serious Game\Dash_tests\EMGA_portfolio\apps\Portafolio_parameters.csv',
+port_param = pd.read_csv('https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/Portafolio_parameters.csv',
+    #r'C:\Users\20194851\Google Drive\Postdoc TUe\Project Serious Game\Dash_tests\EMGA_portfolio\apps\Portafolio_parameters.csv',
     header=0, squeeze=True)
 
 port_param_num = port_param.replace({'High': 3 / 3, 'Medium': 2 / 3, 'Low': 1 / 3})
@@ -1025,6 +1025,7 @@ layout = html.Div([
 )
 
 
+
 #################################################################
 #################################################################
 
@@ -1039,7 +1040,8 @@ layout = html.Div([
      Output("portf_button", "disabled"),
      Output("portf_button", "className"),
      ],
-    [Input('portfolio', 'id'),
+    [
+        # Input('portfolio', 'id'),
      Input('slider_ess', 'value'),
      Input('slider_pv', 'value'),
      Input('slider_wt', 'value'),
@@ -1050,7 +1052,7 @@ layout = html.Div([
      Input('slider_th', 'disabled'),
      Input('portf_button', 'n_clicks')],
 )
-def spider_fig(a, ess, pv, wt, th, ess_dis, pv_dis, wt_dis, th_dis, nclick):
+def spider_fig(ess, pv, wt, th, ess_dis, pv_dis, wt_dis, th_dis, nclick):
     total = ess * (not ess_dis) + pv * (not pv_dis) + wt * (not wt_dis) + th * (not th_dis) + 0.00001
     budget = ess * (not ess_dis) * port_param_num.iloc[3][6] + pv * (not pv_dis) * port_param_num.iloc[2][6] \
              + wt * (not wt_dis) * port_param_num.iloc[1][6] + th * (not th_dis) * port_param_num.iloc[0][6]
@@ -1060,7 +1062,7 @@ def spider_fig(a, ess, pv, wt, th, ess_dis, pv_dis, wt_dis, th_dis, nclick):
             1] * 1 / total + wt * (not wt_dis) * port_param_num.iloc[1][1] * 1 / total + th * (not th_dis) * \
               port_param_num.iloc[0][1] * 1 / total
         disp = ess * (not ess_dis) * port_param_num.iloc[3][2] * 1 / total + pv * (not pv_dis) * port_param_num.iloc[2][
-            2] * 1 / total + wt * (not wt_dis) * port_param_num.iloc[1][2] * 1 / total + th * (not th_dis) * \
+            2] * 0 / total + wt * (not wt_dis) * port_param_num.iloc[1][2] * 0 / total + th * (not th_dis) * \
                port_param_num.iloc[0][2] * 1 / total
         vari = ess * (not ess_dis) * port_param_num.iloc[3][3] * 1 / total + pv * (not pv_dis) * port_param_num.iloc[2][
             3] * 1 / total + wt * (not wt_dis) * port_param_num.iloc[1][3] * 1 / total + th * (not th_dis) * \
@@ -1078,6 +1080,10 @@ def spider_fig(a, ess, pv, wt, th, ess_dis, pv_dis, wt_dis, th_dis, nclick):
         vari = 0.0
         emi1 = 0.0
         emi2 = 0.0
+
+    # dash.callback_context.response.set_cookie('flex_therm', str(port_param_num.iloc[0][9]), max_age=7200)
+    # dash.callback_context.response.set_cookie('flex_storage', str(port_param_num.iloc[3][9]), max_age=7200)
+
 
     fig = go.Figure(data=go.Scatterpolar(
         r=[cap, disp, vari, emi1, emi2],
@@ -1137,8 +1143,8 @@ def spider_fig(a, ess, pv, wt, th, ess_dis, pv_dis, wt_dis, th_dis, nclick):
         ############################################################
         conn = psycopg2.connect(DATABASE_URL, sslmode='require')
         cur = conn.cursor()
-        cur.execute("""INSERT INTO portfolio (player, thermic, wind, solar, storage) VALUES (%s, %s, %s, %s, %s)""",
-        (user_active, th * (not th_dis), wt * (not wt_dis), pv * (not pv_dis), ess * (not ess_dis)))
+        cur.execute("""INSERT INTO portfolio (player, thermic, wind, solar, storage, flexibility) VALUES (%s, %s, %s, %s, %s, %s)""",
+        (user_active, th * (not th_dis), wt * (not wt_dis), pv * (not pv_dis), ess * (not ess_dis), disp))
         # cur.execute("""UPDATE portfolio SET thermic = (%s) WHERE Player = (%s);""", (th * (not th_dis), user_active,))
         # cur.execute("""UPDATE Leader_board SET Revenue = (%s) WHERE Player = (%s);""", (accumA, user_active,))
         # cur.execute("""UPDATE Leader_board SET Rate = (%s) WHERE Player = (%s);""", (rate, user_active,))
@@ -1231,37 +1237,3 @@ def energy_cap_th(value):
     else:
         return True
 
-
-# @app.callback(Output('link_port', 'href'),
-#               [Input('portf_button', 'n_clicks'),
-#      Input('slider_ess', 'value'),
-#      Input('slider_pv', 'value'),
-#      Input('slider_wt', 'value'),
-#      Input('slider_th', 'value'),
-#      Input('slider_ess', 'disabled'),
-#      Input('slider_pv', 'disabled'),
-#      Input('slider_wt', 'disabled'),
-#      Input('slider_th', 'disabled')]
-#               )
-# def button_link(nclick, ess, pv, wt, th, ess_dis, pv_dis, wt_dis, th_dis):
-#     user_active = flask.request.cookies.get('custom-auth-session')
-#
-#     if nclick:
-#         ############################################################
-#         conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-#         cur = conn.cursor()
-#         cur.execute("""INSERT INTO portfolio (player, thermic, wind, solar, storage) VALUES (%s, %s, %s, %s, %s)""",
-#         (user_active, th * (not th_dis), wt * (not wt_dis), pv * (not pv_dis), ess * (not ess_dis)))
-#         # cur.execute("""UPDATE portfolio SET thermic = (%s) WHERE Player = (%s);""", (th * (not th_dis), user_active,))
-#         # cur.execute("""UPDATE Leader_board SET Revenue = (%s) WHERE Player = (%s);""", (accumA, user_active,))
-#         # cur.execute("""UPDATE Leader_board SET Rate = (%s) WHERE Player = (%s);""", (rate, user_active,))
-#
-#         conn.commit()
-#
-#         cur.close()
-#         conn.close()
-#         ############################################################
-#
-#         link = '/Page_1'
-#
-#         return link

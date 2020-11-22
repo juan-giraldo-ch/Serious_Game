@@ -52,7 +52,8 @@ def download_data():
     C = html.Div([
         html.Div([
 
-            html.A(dcc.Loading(id='loading_1', color=app.color_3, type='default'),
+            html.A(
+                dcc.Loading(id='loading_1', color=app.color_3, type='default'),
                    id='link_downl',
                    download="",
                    href="",
@@ -62,6 +63,34 @@ def download_data():
 
     ])
     return C
+
+def download_irrad():
+    I = html.Div([
+        html.Div([
+
+            html.A(dcc.Loading(id='loading_3', color=app.color_3, type='default'),
+                   id='link_downl3',
+                   download="",
+                   href="",
+                   target="_blank",
+                   ),
+        ]),  #
+
+    ])
+    return I
+
+def port_info():
+    G = html.Div([
+
+        html.A(dcc.Loading(id='loading_4', color=app.color_3, type='default'),
+               id='port_dwnl',
+               download="",
+               href="",
+               target="_blank"
+               ),
+        ])
+
+    return G
 
 
 def download_DAP():
@@ -249,3 +278,5 @@ def help_drag():
     ], style={'display': 'inline-block'})
 
     return F
+
+

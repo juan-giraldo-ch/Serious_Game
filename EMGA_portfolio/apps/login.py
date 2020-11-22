@@ -63,18 +63,21 @@ def route_login():
         cur.execute("SELECT days FROM Leader_board WHERE Player = (%s);", (user_active,))
         # print(players)
         days = cur.fetchone()
+        cur.execute("SELECT thermic FROM portfolio WHERE player = (%s);", (session_cookie,))
+        # print(players)
+        id = cur.fetchone()
         cur.close()
         conn.close()
 
-        # if len(days):
-        #print('OK')
 
-        if days:
+        # if len(days):
+
+        if days and id:
             day = days[0]
             #print(day)
             #print(len(app.WF_real_power) / 96)
 
-            if day >= len(app.WF_real_power) / 96:
+            if day >= app.play_days: #len(app.WF_real_power) / 96:
                 rep = flask.redirect('/Page_end')
 
                 rep.set_cookie('custom-auth-session', username, max_age=7200)  # expires in 2 hours
@@ -93,7 +96,7 @@ def route_login():
             return rep
         #############################################################
 
-        elif not days:
+        elif not days or not id:
             rep = flask.redirect('/portfolio')
             rep.set_cookie('custom-auth-session', username, max_age=7200)  # expires in 2 hours
 

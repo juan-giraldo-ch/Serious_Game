@@ -10,6 +10,7 @@ import datetime
 
 # import dash_auth
 import dash_bootstrap_components as dbc
+import power_renew_generators as pwg
 # from foreUtils_2020 import powerG126
 
 # from users import users_info
@@ -34,8 +35,10 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],
                 meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}])
 
 
-app.database_url = 'Local' # 'Server'
+app.database_url = 'Server'#'Local' #
+play_days = 10 # Define the number of days to be played
 
+Number_WT = 1
 
 
 ##################
@@ -73,21 +76,36 @@ app.color_bfig = '#dae1e7'
 
 ####
 
+######## Constants ################
 
-# ######## Colors #############
-# app.color_1 = '#454545'  # Background page
-# app.color_2 = '#8E9799'  # Background figures
-# app.color_3 = '#0D1F22'  # Color header and sidebar
-# app.color_4 = '#8aee59'  # Main text color
-# #app.color_4 = '#7fafdf'  # Main text color
-# app.color_5 = '#D8F7FF'  # Rate, positive
-# app.color_6 = '#C6C6D1'
-# app.color_7 = '#FDFDFF'#'#75DDDD'  # Warning messages
-# app.color_8 = '#FDFDFF'#'#75DDDD'  # OK status
-# app.color_9 = '#00D0F4'  # Bars  #00D0F4
-# app.color_10 = '#ED6A5A'  # Accumulated, negative
-# app.color_11 = '#8F3985'
+app.rampU_thermal = 0.25    # Times nominal power from portfolio
+app.rampD_thermal = -0.25   # Times nominal power from portfolio
+app.min_thermal = 0.20  # Times nominal power from portfolio
+app.max_thermal = 0.90  # Times nominal power from portfolio
+app.flex_th = 0.15      # Times submited bid
 
+app.rampU_wind = 10 
+app.rampD_wind = -10
+app.min_wind = 0.0
+app.max_wind = 1.0
+
+app.rampU_solar = 10
+app.rampD_solar = -10
+app.min_solar = 0.0
+app.max_solar = 1.0
+
+app.rampU_storage = 0.75
+app.rampD_storage = -0.75
+app.min_storage = -0.9
+app.max_storage = 0.9
+app.min_SOC_storage = 10        # Percentage nominal energy capacity from portfolio
+app.max_SOC_storage = 90        # Percentage nominal energy capacity from portfolio
+app.initial_SOC_storage = 50    # Percentage nominal energy capacity from portfolio
+
+
+#app.a_thermal = 0.02881 + 0.0003589*x + -0.0003663*y + -1.923e-05*x^2 + 1.177e-05*x*y + -1.217e-06*y^2
+#app.b_thermal = 25.81 + -2.721*x + 0.5477*y + -0.1922*x^2 + 0.133*x*y + -0.02102*y^2
+#app.c_thermal = 25.83 + -26.14*x + 8.122 *y + -1.41*x^2 +  0.9836*x*y + -0.16*y^2
 # ---- NOT SHARED DATA ----- #
 
 ###############################
@@ -124,41 +142,27 @@ next_wind = pd.read_csv(url_nextW, header=0, parse_dates=[0], squeeze=True, date
 A = next_wind.resample('H', on='DateTime').mean()
 # next_wind = next_wind.set_index('DateTime')
 
+# print(A)
 
-Number_WT = 10
-
-def powerG126(speed):
-    power = np.zeros(speed.shape)
-    # powerH = np.zeros((speed.shape[0], int(speed.shape[0] / (6 * 24))))
-    t = 1
-    for s in range(power.shape[0]):
-        for t in range(power.shape[1]):
-            if speed.iloc[s, t] < 2 or speed.iloc[s, t] > 25:
-                power[s, t] = 0
-            elif speed.iloc[s, t] >= 2 and speed.iloc[s, t] < 10:
-                power[s, t] = -7.1754 * (speed.iloc[s, t] ** 3) + 120.13 * (speed.iloc[s, t] ** 2) - 252.4 * speed.iloc[
-                    s, t] + 186.36
-            elif speed.iloc[s, t] >= 10 and speed.iloc[s, t] <= 21:
-                power[s, t] = 2500
-            elif speed.iloc[s, t] > 21 and speed.iloc[s, t] <= 25:
-                power[s, t] = 9.3333 * (speed.iloc[s, t] ** 3) - 654.31 * (speed.iloc[s, t] ** 2) + 15059 * speed.iloc[
-                    s, t] - 111619
-            else:
-                print(t, s, speed.iloc[s, t])
-                raise ValueError
-
-    # Dates here are artificial in order to resample the dataframe
-    powerDf = pd.DataFrame(index=['s' + str(s) for s in range(1, power.shape[0] + 1)],
-                           columns=pd.date_range('2015-01-01 00:00', periods=power.shape[1], freq='10min'), data=power)
-    powerH = powerDf.T.resample('H').mean().T*Number_WT
-
-    return powerH.values
-
-aa = powerG126(A)
+aa = pwg.powerG126(A, Number_WT)
 
 a = pd.DataFrame(data=aa, index=A.index)
+
+url_irrad = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/hist_irradiation.csv'
+app.PV_irradiation = pd.read_csv(url_irrad, header=0, parse_dates=[0], squeeze=True, date_parser=parser2)
+
+app.PV_irradiation = pd.DataFrame(app.PV_irradiation)
+
+# A = app.PV_irradiation.resample('H', on='DateTime').mean()
+# a_i = pd.DataFrame(data=A, index=A.index)
+
+
+# p_pv = pwg.power_solar(A, 1)
+
+
+# p_pv = pd.DataFrame(data=p_pv, index=A.index)
 days_play1 = int(len(a)/ 24)
-# print(days_play1)
+
 
 a1 = np.zeros((24, days_play1))
 
@@ -172,12 +176,38 @@ for h in range(24):
 
 
 
-
 # app.WF_real_power = pd.read_csv(r'.\Data\next_days.csv')
-#url_next = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/next_days.csv'
-url_next = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/reduced_days.csv'
+url_next = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/next_days.csv'
+#url_next = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/reduced_days.csv'
 app.WF_real_power = pd.read_csv(url_next)
 
+# app.play_days = len(app.WF_real_power) / 96
+
+################################
+
+days_next = app.WF_real_power
+
+days_next['DateTime'] = pd.to_datetime(days_next['DateTime'], format="%d/%m/%Y %H:%M")
+# WT_speed_dates_hist = WT_speed['DateTime']
+
+
+time_mask = days_next['DateTime'] <= days_next['DateTime'].iloc[-1] - datetime.timedelta(days=play_days)
+
+dates_irrad = days_next['DateTime'][time_mask]
+
+#
+#
+delta2 = (datetime.datetime.now() - datetime.datetime.strptime(str(dates_irrad.iloc[-1]), "%Y-%m-%d %H:%M:%S")).days
+
+days_next['DateTime'] = days_next['DateTime'] + datetime.timedelta(delta2)
+
+days_next_hist = days_next[time_mask]
+days_next_play = days_next[~time_mask]
+
+app.play_days = len(days_next_play) / 96
+
+# print(app.play_days)
+################################
 
 
 app.WF_real_powerO = pd.DataFrame(app.WF_real_power)
@@ -193,21 +223,39 @@ B = app.WF_real_powerO.iloc[:, 3]  # Negative inbalance tariff
 
 days_play = len(app.WF_real_power) / 96
 
-print(days_play)
+# print(days_play)
 
 
-delta1 = (datetime.datetime.now() - datetime.datetime.strptime(str(app.dates_nextday.iloc[0]), "%Y-%m-%d %H:%M:%S")).days  #"%Y-%m-%d %H:%M:%S"
+# delta1 = (datetime.datetime.now() - datetime.datetime.strptime(str(app.dates_nextday.iloc[0]), "%Y-%m-%d %H:%M:%S")).days  #"%Y-%m-%d %H:%M:%S"
+#
+#
+# def parser3(x):
+#     B = (datetime.datetime.strptime(str(x), "%d/%m/%Y %H:%M") + datetime.timedelta(days=delta1)).strftime(
+#         '%Y-%m-%d %H:%M')
+#     return ((datetime.datetime.strptime(B, '%Y-%m-%d %H:%M')))  # + datetime.datetime.now()
+# app.dates_nextday = pd.read_csv(url_nextW, header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser3)
+#
 
 
-def parser2(x):
-    B = (datetime.datetime.strptime(str(x), "%d/%m/%Y %H:%M") + datetime.timedelta(days=delta1)).strftime(
-        '%Y-%m-%d %H:%M')
-    return ((datetime.datetime.strptime(B, '%Y-%m-%d %H:%M')))  # + datetime.datetime.now()
-app.dates_nextday = pd.read_csv(url_nextW, header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser2)
+################################################
 
 
+# app.dates_irrad = app.PV_irradiation['DateTime']
 
-################################
+
+# delta2 = (datetime.datetime.now() - datetime.datetime.strptime(str(app.dates_irrad.iloc[-1]),
+#                                                               "%Y-%m-%d %H:%M:%S")).days
+# print(delta2)
+# def parser4(x):
+#     B = (datetime.datetime.strptime(str(x), "%d/%m/%Y %H:%M") + datetime.timedelta(days=delta2)).strftime(
+#         '%Y-%m-%d %H:%M')
+#     return ((datetime.datetime.strptime(B, '%Y-%m-%d %H:%M')))  # + datetime.datetime.now()
+# app.dates_irrad1 = pd.read_csv(url_irrad, header=0, parse_dates=[0], squeeze=True, date_parser=parser4)
+# app.dates_irrad1 = app.dates_irrad1.reset_index()
+# app.dates_irrad1 = app.dates_irrad1.drop('index', 1)
+# # print(app.dates_irrad1)
+
+##############################################################
 
 url_DAP = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/DAP_Feb_2020.csv'
 DAP = pd.read_csv(url_DAP)
@@ -219,6 +267,7 @@ d = 1
 Lp = np.zeros((24, 1 + int(days_play1)))
 Lm = np.zeros((24, 1 + int(days_play1)))
 Pr = np.zeros((24, 1 + int(days_play1)))
+
 
 
 for i in range(len(DAP['DateTime'])):
@@ -268,21 +317,27 @@ app.real_P = a1/1000 # MW#app.WF_inj / 1000
 # ---- SHARED DATA ----- #
 # url_hist = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/hist_data.csv'
 url_hist = 'https://raw.githubusercontent.com/juan-giraldo-ch/Serious_Game/master/windSpeed_2020.csv'
-A = pd.read_csv(url_hist)
-delta = (datetime.datetime.now() - datetime.datetime.strptime(str(A.iloc[-1]['DateTime']),
-                                                              "%d/%m/%Y %H:%M")).days
+app.wind_data = pd.read_csv(url_hist)
 
 
-def parser(x):
-    B = (datetime.datetime.strptime(str(x), "%d/%m/%Y %H:%M") + datetime.timedelta(days=delta)).strftime(
-        '%Y-%m-%d %H:%M')
-    return ((datetime.datetime.strptime(B, '%Y-%m-%d %H:%M')))  # + datetime.datetime.now()
+# delta = (datetime.datetime.now() - datetime.datetime.strptime(str(A.iloc[-1]['DateTime']),
+#                                                               "%d/%m/%Y %H:%M")).days
 
 
-app.wf_power = pd.read_csv(url_hist, header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
-
-
-app.aa = pd.read_csv(url_hist, header=0, parse_dates=[0], squeeze=True, date_parser=parser)
+# def parser(x):
+#     B = (datetime.datetime.strptime(str(x), "%d/%m/%Y %H:%M") + datetime.timedelta(days=delta)).strftime(
+#         '%Y-%m-%d %H:%M')
+#     return ((datetime.datetime.strptime(B, '%Y-%m-%d %H:%M')))  # + datetime.datetime.now()
+#
+#
+# app.wf_power = pd.read_csv(url_hist, header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
+#
+#
+#
+# app.aa = pd.read_csv(url_hist, header=0, parse_dates=[0], squeeze=True, date_parser=parser)
+#
+#
+# print(app.aa)
 
 
 

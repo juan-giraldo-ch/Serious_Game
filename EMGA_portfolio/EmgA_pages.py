@@ -170,14 +170,51 @@ def display_page(pathname):
         if not session_cookie:
             return login.layout
         else:
-            return portfolio.layout
+            conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
+            cur = conn.cursor()
+
+            cur.execute("SELECT thermic FROM portfolio WHERE player = (%s);", (session_cookie,))
+            # print(players)
+            id = cur.fetchone()
+            cur.close()
+            conn.close()
+
+            # if len(days):
+            # print(id[0])
+
+            # day = days[0]
+            if not id:
+                return portfolio.layout
+            else:
+                return login.layout
 
     if pathname == '/Page_end':
         session_cookie = flask.request.cookies.get('custom-auth-session')
+
         if not session_cookie:
             return login.layout
+
         else:
-            return page_end.layout
+
+            conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
+            cur = conn.cursor()
+
+            cur.execute("SELECT days FROM Leader_board WHERE Player = (%s);", (session_cookie,))
+            # print(players)
+            days = cur.fetchone()
+            cur.close()
+            conn.close()
+
+            # if len(days):
+            # print('OK')
+
+            day = days[0]
+            if day >= app.play_days:#len(app.play_days) / 96:
+                return page_end.layout
+            else:
+                return login.layout
 
     if pathname == '/restore':
         return restore.layout
