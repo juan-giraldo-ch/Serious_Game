@@ -1,5 +1,5 @@
 Technology,Capacity Factor,Dispatchability,Variability,Direct Emissions,Indirect Emissions,Construction Cost,Max,Budg_tot,Reserve
-Thermic,High,High,Low,High,High,700,100,70000,10
-Wind,Medium,Low,High,Low,Medium,1382,100,138200,0
-Solar,Low,Low,High,Low,Low,1848,100,184800,0
-Storage,High,High,Low,Low,Medium,1239,100,123900,10
+Thermal,High,High,Low,High,High,700,100,70000,10
+Wind,Medium,Low,High,Low,Medium,1382,50,69100,0
+Solar,Low,Low,High,Low,Low,1848,0,0,0
+Storage,High,High,Low,Low,Medium,1239,80,99120,10
